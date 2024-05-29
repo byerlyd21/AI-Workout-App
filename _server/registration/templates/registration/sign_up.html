@@ -1,0 +1,31 @@
+{% extends "registration/base.html"%}
+
+{% block content %}
+<div class="card">
+  <h1>Create Account</h1>
+  <form action="/registration/sign_up/" method="post">
+    {% csrf_token %}
+    <div>
+      <label>
+        <input type="text" name="first_name" placeholder="First Name">
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="email" name="email" placeholder="Email">
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="password" name="password" placeholder="Password">
+      </label>
+    </div>
+    <button>Create Account</button>
+  </form>
+</div>
+{% endblock %}
